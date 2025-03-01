@@ -29,9 +29,9 @@ pip install base64_bytesio
 
 Example of using the library
 ```
-from base64_bytesio import Base64BytesIO
+from base64_bytesio import base64_bytesio
 
 data = "data:image/jpeg;base64,..."
-decoder = Base64BytesIO()
-file_object, filename = decoder.decode(data)
+decoder = base64_bytesio()
+file_object, filename = decoder.base64_bytesio(data)
 ```
