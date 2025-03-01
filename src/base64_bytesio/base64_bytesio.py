@@ -2,7 +2,7 @@
 Author: Bryan x23399937@student.ncirl.ie
 Date: 2025-03-01 12:24:24
 LastEditors: Bryan x23399937@student.ncirl.ie
-LastEditTime: 2025-03-01 15:55:33
+LastEditTime: 2025-03-01 16:33:33
 FilePath: /base64_bytesio/src/base64_bytesio/base64_bytesio.py
 Description: 
 using base64 format as image
@@ -48,9 +48,9 @@ class Base64BytesIO:
 
             # Try to decode the file. Return validation error if it fails.
             try:
-                decoded_file = base64.b64decode(self.data)
+                self.decoded_file = base64.b64decode(self.data)
             except TypeError:
-                TypeError('invalid_image')
+                raise TypeError('invalid_image')
 
             # Generate file name:
             self.file_name = str(uuid.uuid4())[:12]  # 12 characters are more than enough.
